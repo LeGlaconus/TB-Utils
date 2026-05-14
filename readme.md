@@ -1,8 +1,22 @@
 # T[rench]B[room] Utilities
 
+<center>
+<img src="images/d1_trainstation_02.png" width=700>
+<figcaption>
+    Half-Life 2's <code>d1_trainstation_01</code> loaded in TrenchBroom.
+</figcaption>
+</center>
+
+<center>
+<img src="images/e1m1.png" width=700>
+<figcaption>
+    Quake's <code>e1m1</code> loaded in Hammer.
+</figcaption>
+</center>
+
 ## VMF Utilities
 `vmf-utils` can export a Quake I/II .map to the .vmf format, or export a .vmf to the Quake II .map format.
-Layers (called Visgroups in Hammer) and groups are also transfered between the two formats.
+Layers (called Visgroups in Hammer) and groups are also transfered between the two formats. Comments are transfered via the `_vmf_comments` keyvalue. Inputs and outputs are transfered from .vmf files by being incrementally prefixed with @<i>n</i>, the separators must all be present or the outputs will not transfer appropriately.
 
 It can be included in the TrenchBroom compiling process, whether the .map is exported or not is not important, as `vmf-utils` treat omitted layers as disabled visgroups. As a reminder, `vmf-utils` does not modify the imported map.
 
@@ -23,7 +37,7 @@ It can be included in the TrenchBroom compiling process, whether the .map is exp
 - `--no-atrib-write` : Don't write contents flags and values.
 
 ### What's next ?
-Disabling any layer conversion, disabling groups exportation, only using the children groups, making the conversion faster...
+Disabling any layer conversion, disabling groups exportation, only using the children groups, supporting post-L4D I/O, making the conversion faster...
 
 ## FGD Utilities
 `fgd-utils` helps porting Source FGD files to a TrenchBroom-appropriate version.
